@@ -1,0 +1,42 @@
+<%= form_with(model: audit_log_entry) do |form| %>
+  <% if audit_log_entry.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(audit_log_entry.errors.count, "error") %> prohibited this audit_log_entry from being saved:</h2>
+
+      <ul>
+        <% audit_log_entry.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :action, style: "display: block" %>
+    <%= form.text_field :action %>
+  </div>
+
+  <div>
+    <%= form.label :employee_id, style: "display: block" %>
+    <%= form.text_field :employee_id %>
+  </div>
+
+  <div>
+    <%= form.label :record_id, style: "display: block" %>
+    <%= form.text_field :record_id %>
+  </div>
+
+  <div>
+    <%= form.label :before_state, style: "display: block" %>
+    <%= form.text_area :before_state %>
+  </div>
+
+  <div>
+    <%= form.label :after_state, style: "display: block" %>
+    <%= form.text_area :after_state %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -27,3 +27,10 @@ Employee:
 - last_name
 - hire_date
 - title
+
+AuditLogEntry:
+- action:string
+- employee:references
+- record:references
+- before_state:text
+- after_state:text

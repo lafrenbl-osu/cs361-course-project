@@ -1,0 +1,27 @@
+<div id="<%= dom_id audit_log_entry %>">
+  <p>
+    <strong>Action:</strong>
+    <%= audit_log_entry.action %>
+  </p>
+
+  <p>
+    <strong>Employee:</strong>
+    <%= audit_log_entry.employee_id %>
+  </p>
+
+  <p>
+    <strong>Record:</strong>
+    <%= audit_log_entry.record_id %>
+  </p>
+
+  <p>
+    <strong>Before state:</strong>
+    <%= audit_log_entry.before_state %>
+  </p>
+
+  <p>
+    <strong>After state:</strong>
+    <%= audit_log_entry.after_state %>
+  </p>
+
+</div>

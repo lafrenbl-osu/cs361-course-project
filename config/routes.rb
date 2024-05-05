@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :audit_log_entries
   resources :employees
   resources :art_pieces
   resources :artists
@@ -12,5 +13,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "art_pieces#index"
 
+  resources :art_pieces
   resources :artists
+  resources :audit_log_entries
 end

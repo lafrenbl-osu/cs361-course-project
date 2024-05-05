@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  action: MyString
+  employee: one
+  record: one
+  before_state: MyText
+  after_state: MyText
+
+two:
+  action: MyString
+  employee: two
+  record: two
+  before_state: MyText
+  after_state: MyText

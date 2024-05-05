@@ -1,0 +1,20 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Audit Log Entries</h1>
+
+<div id="audit_log_entries">
+  <table>
+    <thead>
+      <tr class="table-dark">
+        <th>Employee</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @audit_log_entries.each do |audit_log_entry| %>
+        <tr>
+          <td><%= audit_log_entry.employee.full_name %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

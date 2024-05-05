@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @audit_log_entry %>
+
+<div>
+  <%= link_to "Edit this audit log entry", edit_audit_log_entry_path(@audit_log_entry) %> |
+  <%= link_to "Back to audit log entries", audit_log_entries_path %>
+
+  <%= button_to "Destroy this audit log entry", @audit_log_entry, method: :delete %>
+</div>
