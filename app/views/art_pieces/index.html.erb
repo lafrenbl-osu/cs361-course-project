@@ -1,6 +1,15 @@
-<p style="color: green"><%= notice %></p>
+<% if notice %>
+  <p style="color: green"><%= notice %></p>
+<% end %>
 
-<h1>Art pieces</h1>
+<%= render partial: "shared/header_and_tagline",
+  locals: {
+    title: "Browse Inventory",
+    tagline: "Use the below table to browse the gallery's art piece inventory."
+  }
+%>
+
+<%= render "nav" %>
 
 <div id="art_pieces">
   <table class="table">
@@ -9,6 +18,7 @@
         <th>Title</th>
         <th>Artist</th>
         <th>Release Date</th>
+        <th>Options</th>
       </tr>
     </thead>
     <tbody>
@@ -17,10 +27,9 @@
           <td><%= art_piece.title %></td>
           <td><%= art_piece.artist.full_name %></td>
           <td><%= art_piece.release_date %></td>
+          <td><%= link_to "View Details", art_piece_path(art_piece) %></td>
         </tr>
       <% end %>
     </tbody>
   </table>
 </div>
-
-<%= link_to "New art piece", new_art_piece_path %>

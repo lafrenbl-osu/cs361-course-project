@@ -12,6 +12,9 @@ class ArtistsController < ApplicationController
 
   # GET /artists/new
   def new
+    add_breadcrumb("Inventory Browser", art_pieces_path)
+    add_breadcrumb("Art Piece Entry", new_art_piece_path)
+    add_breadcrumb("Artist Entry", new_artist_path)
     @artist = Artist.new
   end
 

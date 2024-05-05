@@ -19,7 +19,7 @@
 
     <div class="mb-3">
       <%= form.label :artist_id, style: "display: block" %>
-      <%= form.select :artist_id, options_from_collection_for_select(Artist.all, :id, :full_name), {}, { class: 'form-select' } %>
+      <%= form.select :artist_id, options_from_collection_for_select(Artist.all, :id, :full_name), {include_blank: true}, { class: 'form-select' } %>
       <div class="d-flex flex-row-reverse">
         <%= link_to "New Artist", new_artist_path %>
       </div>

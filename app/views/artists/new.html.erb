@@ -1,9 +1,12 @@
-<h1>New artist</h1>
+<%= render partial: "shared/header_and_tagline",
+  locals: {
+    title: "New Artist Entry",
+    tagline: "Use the form below to add an artist to the system."
+  }
+%>
 
-<%= render "form", artist: @artist %>
+<%= render partial: "shared/breadcrumbs" %>
 
-<br>
-
-<div>
-  <%= link_to "Back to artists", artists_path %>
+<div class="d-flex justify-content-center">
+  <%= render "form", artist: @artist %>
 </div>

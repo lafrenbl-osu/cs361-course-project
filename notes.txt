@@ -1,0 +1,29 @@
+For an art gallery inventory management system...
+
+It seems that each piece would be pretty unique, like you probably wouldn't have
+inventory in the traditional sense, like a warehouse, where you have 100 units
+of something. Although, it would be possible to have multiple copies, I believe,
+perhaps if you have reproductions of things? Although I think that would be
+pretty rare.
+
+For the entities, I would probably have a `Piece` entity, which just represents
+a single art piece.
+
+Artist:
+- id
+- first_name
+- last_name
+- bio
+
+ArtPiece:
+- id
+- title
+- artist
+- release_date
+
+Employee:
+- id
+- first_name
+- last_name
+- hire_date
+- title

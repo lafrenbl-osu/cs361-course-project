@@ -1,0 +1,19 @@
+<hr />
+
+<div class="d-flex justify-content-center">
+  <nav aria-label="breadcrumb" class="d-flex align-items-center">
+    <ol class="breadcrumb m-0">
+      <% breadcrumbs.each do |bc| %>
+        <li class="breadcrumb-item <%= active_class?(bc.path) %>" aria-current="page">
+          <% if bc.path == request.path %>
+            <%= bc.name %>
+          <% else %>
+            <%= link_to bc.name, bc.path %>
+          <% end %>
+        </li>
+      <% end %>
+    </ol>
+  </nav>
+</div>
+
+<hr />

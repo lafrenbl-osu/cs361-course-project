@@ -12,6 +12,9 @@ class ArtPiecesController < ApplicationController
 
   # GET /art_pieces/new
   def new
+    add_breadcrumb("Browse Inventory", art_pieces_path)
+    add_breadcrumb("Art Piece Entry", new_art_piece_path)
+
     @art_piece = ArtPiece.new
   end
 
