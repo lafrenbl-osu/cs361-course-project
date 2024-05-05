@@ -1,0 +1,26 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Art pieces</h1>
+
+<div id="art_pieces">
+  <table class="table">
+    <thead>
+      <tr class="table-dark">
+        <th>Title</th>
+        <th>Artist</th>
+        <th>Release Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @art_pieces.includes(:artist).each do |art_piece| %>
+        <tr>
+          <td><%= art_piece.title %></td>
+          <td><%= art_piece.artist.full_name %></td>
+          <td><%= art_piece.release_date %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<%= link_to "New art piece", new_art_piece_path %>
