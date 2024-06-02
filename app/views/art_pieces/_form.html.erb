@@ -30,10 +30,9 @@
       <%= form.date_field :release_date, class: 'form-control' %>
     </div>
 
-    <div class="mb-3">
-      <div class="d-flex flex-row-reverse">
-        <%= form.submit "Save Art Piece", class: "btn btn-primary" %>
-      </div>
+    <div class="mb-3 d-flex justify-content-between">
+      <%= button_tag "Cancel", onclick: "window.history.back()", class: "btn btn-secondary" %>
+      <%= form.submit "Save Art Piece", class: "btn btn-primary" %>
     </div>
   <% end %>
 </div>

@@ -1,6 +1,11 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Employees</h1>
+<%= render partial: "shared/header_and_tagline",
+  locals: {
+    title: "Employee Browser",
+    tagline: "Below is a list of employees currently in the system."
+  }
+%>
 
 <div id="employees">
   <table class="table">
@@ -25,4 +30,4 @@
   </table>
 </div>
 
-<%= link_to "New employee", new_employee_path %>
+<%= link_to "Employee Entry Form", new_employee_path %>
