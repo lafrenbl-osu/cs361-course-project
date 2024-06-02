@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_05_05_032001) do
+ActiveRecord::Schema[7.1].define(version: 2024_05_05_034628) do
   create_table "art_pieces", force: :cascade do |t|
     t.string "title"
     t.integer "artist_id", null: false
@@ -29,7 +29,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_05_032001) do
   end
 
   create_table "audit_log_entries", force: :cascade do |t|
-    t.string "action"
+    t.integer "action"
     t.integer "employee_id", null: false
     t.string "record_type", null: false
     t.integer "record_id", null: false
@@ -48,6 +48,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_05_032001) do
     t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "internal_handle"
   end
 
   add_foreign_key "art_pieces", "artists"

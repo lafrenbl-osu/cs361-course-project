@@ -7,3 +7,21 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+e1 = Employee.create!(
+  first_name: "Default",
+  last_name: "User",
+  hire_date: Time.now,
+  title: "Placeholder",
+  internal_handle: "default"
+)
+
+da_vinci = Artist.create!(
+  first_name: "Leonardo",
+  last_name: "da Vinci"
+)
+
+ap1 = ArtPiece.create!(
+  title: "Mona Lisa",
+  artist: da_vinci
+)

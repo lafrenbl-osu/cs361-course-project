@@ -29,7 +29,7 @@ Employee:
 - title
 
 AuditLogEntry:
-- action:string
+- action:int
 - employee:references
 - record:references
 - before_state:text

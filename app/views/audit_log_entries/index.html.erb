@@ -1,18 +1,31 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Audit Log Entries</h1>
+<%= render partial: "shared/header_and_tagline",
+  locals: {
+    title: "Audit Log Entries",
+    tagline: "View the list of audit records below to see who did what, and when."
+  }
+%>
 
 <div id="audit_log_entries">
-  <table>
+  <table class="table">
     <thead>
       <tr class="table-dark">
         <th>Employee</th>
+        <th>Action</th>
+        <th>URL</th>
+        <th>Timestamp</th>
+        <th>Details</th>
       </tr>
     </thead>
     <tbody>
       <% @audit_log_entries.each do |audit_log_entry| %>
         <tr>
           <td><%= audit_log_entry.employee.full_name %></td>
+          <td><%= audit_log_entry.action %></td>
+          <td><%= link_to audit_log_entry.record.title, polymorphic_url(audit_log_entry.record) %></td>
+          <td><%= audit_log_entry.created_at %></td>
+          <td><%= link_to "View Details", audit_log_entry_path(audit_log_entry) %></td>
         </tr>
       <% end %>
     </tbody>
