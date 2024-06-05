@@ -6,12 +6,13 @@ module Auditable
   end
 
   def audit_log_of_create
-    @entry = AuditLogEntry.create!(
+    @entry = AuditLog.create(
       action: :created,
-      employee: Employee.first,
+      employee_id: Employee.first.id,
       before_state: nil,
       after_state: JSON.pretty_generate(as_json),
-      record: self
+      record_id: self.id,
+      record_type: self.class.name
     )
   end
 end

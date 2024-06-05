@@ -23,9 +23,9 @@
         <tr>
           <td><%= audit_log_entry.employee.full_name %></td>
           <td><%= audit_log_entry.action %></td>
-          <td><%= link_to audit_log_entry.record.title, polymorphic_url(audit_log_entry.record) %></td>
+          <td><%= link_to audit_log_entry.record.title, audit_log_entry.record.path %></td>
           <td><%= audit_log_entry.created_at %></td>
-          <td><%= link_to "View Details", audit_log_entry_path(audit_log_entry) %></td>
+          <td><%= link_to "View Details", audit_log_entry_path(audit_log_entry.id) %></td>
         </tr>
       <% end %>
     </tbody>

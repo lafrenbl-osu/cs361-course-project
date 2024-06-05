@@ -8,13 +8,15 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-e1 = Employee.create!(
+e1_atts = {
   first_name: "Default",
   last_name: "User",
   hire_date: Time.now,
   title: "Placeholder",
   internal_handle: "default"
-)
+}
+
+Employee.create(e1_atts)
 
 da_vinci = Artist.create!(
   first_name: "Leonardo",
